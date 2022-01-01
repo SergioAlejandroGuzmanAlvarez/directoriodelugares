@@ -1,0 +1,195 @@
+.fondoMar{
+    margin-top: 20px;
+    margin-left: -10px;
+    right: 30px;
+    width: 1390px;
+    height: 380px;
+}
+.LogoWeb2{
+    position: relative;
+    width: 150px;
+    height: 70px;
+    margin-left: -1065px;
+    margin-top: -10;
+}
+.titulo1{
+    margin-top: 90px;
+}
+.mensaje{
+    font-family: 'Lato', sans-serif;
+    margin-top: -20px;
+}
+.sayulita{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    right: -30px;
+}
+.sayutitu{
+    margin-left:155px
+}
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin: 0;
+}
+@keyframes cambio {
+    0% {margin-left:     0;}
+    30% {margin-left: 0;}
+
+    34% {margin-left: -100%;}
+    64% {margin-left: -100%;}
+
+    67% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+}
+
+.menu {
+    background-color: #468bcc;
+    height: 75px;
+    width: 1349px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .3);
+    position: absolute;
+    left: 0;
+    top: 0;   
+}
+
+.buscar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 38%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #069;
+    color: white;
+    padding: 10px;
+    height: 35px;
+    border-radius: 40px;
+}
+.buscar_texto {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    float: left;
+    line-height: 60px;
+    transition: 1s;
+    width: 0;
+}
+
+.boton {
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+@media screen and (min-width:1024px){
+    .buscar:hover > .buscar_texto{
+        width: 450px;
+    }
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    padding: 0 70px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.menu_items {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu_items {
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menu_items li a {
+    padding: 7px 23px;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.menu_items li:hover, li.active{
+    background-color: rgba(0, 0, 0, .9);
+    transition: .1s;
+}
+
+.btn_menu {
+    margin-right: 30px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+ul.show {
+    top: 65px;
+}
+
+@media screen and(max-width: 952px){
+    .logo{
+        font-size: 30px;
+        padding-left: 35px,
+    }
+    .menu_items li a {
+        font-size: 16px;
+    }
+}
+
+@media screen and(max-width: 858px){
+    .menu {
+        height: 65px;
+    }
+    .btn_menu {
+        display: inline-flex;
+    }
+    .menu_items {
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: #414141;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .menu_items li {
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    .menu_items li:hover {
+        background: none;
+    }
+    .menu_items li a {
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .menu_items li a:hover {
+        color: #e9183b;
+    }
+    .logo {
+        font-size: 25px;
+        padding-left: 35px;
+    }
+}

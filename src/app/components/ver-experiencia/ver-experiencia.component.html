@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">Opiniones de los lugareños</span>
+                    <table *ngIf="listarExperiencias.length > 0" class="table table-secondary table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Calificacion</th>
+                            <th scope="col">Opinión</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let experiencias of listarExperiencias">
+                            <td>{{experiencias.nombre}}</td>
+                            <td>{{experiencias.apellido}}</td>
+                            <td>{{experiencias.descripcion}}</td>
+                            <td>{{experiencias.calificacion}}</td>
+                            <td>{{experiencias.opinion}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h5 style="text-align: start; margin-top: 10px;" *ngIf="listarExperiencias.length == 0"> No hay experiencias para mostrar</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <button class="btn btn-danger float-end" routerLink="/experiencias">Regresar</button>
+                    <br>
+                    <span class="titulo"></span>
+                    <form class="mt-5" [formGroup]="ExperienciasForm" (ngSubmit)="agregarExperiencia()">
+                        <div class="mb-3">
+                            <div class="row g-3">
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Nombre" aria-label="First name"
+                                  formControlName="nombre"
+                                  >
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name"
+                                  formControlName="apellido">
+                                </div>
+                              </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Descripcion de la experiencia</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Mi viaje a la islitas. #travelpicarri"
+                                formControlName="descripcion"
+                            ></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" 
+                                    formControlName="opinion"
+                                ></textarea>
+                                <label for="floatingTextarea2">Comentarios respecto a la experiencia</label>
+                              </div>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-warning">Subir experiencia</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

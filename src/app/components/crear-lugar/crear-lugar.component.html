@@ -1,0 +1,74 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">{{ titulo | uppercase}}</span>
+                    <form class="mt-5" [formGroup]="lugaresForm" (ngSubmit)="agregarLugar()">
+                        <div class="mb-3">
+                            <input type="text" 
+                            formControlName="nombre"
+                            class="form-control"
+                            placeholder="Nombre">
+                            <div class="text-danger"
+                                *ngIf="lugaresForm.get('nombre')?.hasError('required') && lugaresForm.get('nombre')?.touched">
+                                <span>El nombre del lugar <strong>es obligatorio</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control"
+                            formControlName="direccion"
+                            placeholder="Dirección" >
+                            <div class="text-danger"
+                                *ngIf="lugaresForm.get('direccion')?.hasError('required') && lugaresForm.get('direccion')?.touched">
+                                <span>Ingresa la direccion <strong>es obligatorio</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control"
+                            formControlName="estado"
+                            placeholder="El lugar se encuentra (Abierto o Cerrado)">
+                            <div class="text-danger"
+                                *ngIf="lugaresForm.get('estado')?.hasError('required') && lugaresForm.get('estado')?.touched">
+                                <span>Ingresa el estado <strong>es obligatorio</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control"
+                            formControlName="tipo"
+                            placeholder="Tipo">
+                            <div class="text-danger"
+                                *ngIf="lugaresForm.get('tipo')?.hasError('required') && lugaresForm.get('tipo')?.touched">
+                                <span>Ingresa el tipo lugar <strong>es obligatorio</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control"
+                            formControlName="referencias"
+                            placeholder="Referencias">
+                            <div class="text-danger"
+                                *ngIf="lugaresForm.get('referencias')?.hasError('required') && lugaresForm.get('referencias')?.touched">
+                                <span>Ingresa las referencias <strong>es obligatorio</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control"
+                            formControlName="telefono"
+                            placeholder="Teléfono (En caso que no hay ingrese que no existe)">
+                        </div>
+                        <div class="mb-3">
+                            <button routerLink="/listar-lugares" class="btn btn-primary btn-lg float-start">Regresar</button>
+                            <button type="submit" [disabled]="lugaresForm.invalid"class="btn btn-danger btn-lg float-end" >Aceptar</button>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              Default radio
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

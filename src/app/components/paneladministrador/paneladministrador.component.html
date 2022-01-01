@@ -1,0 +1,140 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <title>Panel Administrador</title>
+</head>
+
+<body>
+    <div class="d-flex" id="content-wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logo">
+                <h4 class="text-light font-weight-bold mb-0"> Menú </h4>
+            </div>
+            <div class="menu">
+                <a href="/principal" class="d-block text-light p-3 border-0"><i></i>
+                    Inicio</a>
+                <a href="/listar-lugares" class="d-block text-light p-3 border-0"><i></i>
+                    Anadir Nuevo Lugar</a>
+                <a href="/listar-usuarios" class="d-block text-light p-3 border-0"><i></i>
+                    Ver Usuarios</a>
+                <a href="/login" class="d-block text-light p-3 border-0"><i></i>
+                    Salir</a>
+
+            </div>
+        </div>
+        <!-- Fin sidebar -->
+
+        <div class="w-100">
+
+         <!-- Navbar -->
+         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container">
+    
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+           
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline position-relative d-inline-block my-2">
+                </form>
+            
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link text-dark dropdown-toggle" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="../../assets/images/Administrador.jfif" class="img-fluid rounded-circle avatar mr-2"
+                      alt="https://generated.photos/" />
+                    Administrador
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- Fin Navbar -->
+
+        <!-- Page Content -->
+        <div id="content" class="bg-grey w-100">
+
+              <section class="bg-light py-3">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-9 col-md-8">
+                            <h1 class="font-weight-bold mb-0">¡Bienvenido Administrador! </h1>
+                            <p class="lead text-muted">¿Qué desea realizar? </p>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+              <section class="bg-mix py-3">
+                <div class="container-card">
+                    <div class="card">
+                        <figure>
+                            <img src="../../assets/images/AñadirLugar.png">
+                        </figure>
+                        <div class="contenido-card">
+                            <h3>Añadir Nuevo Lugar</h3>
+                            <p>Apartado donde se podra añadir un nuevo lugar que se encuentre en el municipio de Bahia de Banderas.</p>
+                            <a href="/listar-lugares">Añadir Lugar</a>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <figure>
+                            <img src="../../assets/images/VerUsuarios.jpg">
+                        </figure>
+                        <div class="contenido-card">
+                            <h3>Ver Experiencias</h3>
+                            <p>Apartado donde podra observar a los usuarios que han introducido alguna experiencia.</p>
+                            <a href="/experiencias">Ver Experiencias</a>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <figure>
+                            <img src="../../assets/images/Salir.jpg">
+                        </figure>
+                        <div class="contenido-card">
+                            <h3>Salir</h3>
+                            <p>Pulse aqui abajo para cerrar sesión.</p>
+                            <a href="/login">Salir</a>
+                        </div>
+                    </div>
+                </div>
+              
+              </section>
+
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+</body>

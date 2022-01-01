@@ -1,0 +1,99 @@
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <h1 class="titulo" style="color:#FF0000">T</h1><h1 class="titulo" style="color:#FF8C00">r</h1><h1 class="titulo" style="color:#FFD700">a</h1><h1 class="titulo" style="color:#008000">v</h1><h1 class="titulo"style="color:#00BFFF">e</h1><h1 class="titulo" style="color:#191970">l</h1><h1 class="titulo" style="color: black">Picarri</h1>
+        </div>
+        <img src="../../assets/images/logotravel.png" class="logocamaleon">
+        <div class="menu" id="show-menu">
+            <nav>
+                <ul>
+                    <li><a href="/principal"> <i class="fas fa-headset"></i>Inicio</a></li>
+                    <li><a a routerLink="/buscador"> <i class="fab fa-youtube"> </i>Directorio de lugares</a></li>
+                    <li><a href="/rutanay"> <i class="fab fa-youtube"> </i>Ruta Nayarit</a></li>
+                    <li class="menu-selected"><a routerLink="/experiencias" class="text-menu-selected"> 
+                        <i class="fas fa-file-alt"></i>Experiencias</a></li>
+                    <li><a href="/login"> <i class="fas fa-headset"></i>Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<br>
+<br>
+<br>
+<div class="banner">
+    <div class="capa"></div>
+    <div class="info">
+        <h1>Bienvenido a Experiencias</h1>
+        <p>En este apartado, podras compartir con los demas usuarios tus increibles historias y momentos que viviste en este lugar.</p>
+    </div>
+</div>
+<br>
+    <table *ngIf="listarLugares.length > 0" class="table table-black table-striped mt-3">
+        <thead>
+            <tr>
+                <th scope="col">Tipo de lugar</th>
+                <th scope="col">Nombre del lugar</th>
+                <th scope="col">Calificar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lugares of listarLugares">
+                <td>{{lugares.tipo}}</td>
+                <td>{{lugares.nombre}}</td>
+                <td>
+                    <button class="btn btn-warning" routerLink="/experiencia/opinion">Opinión</button>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    <h5 style="text-align: start; margin-top: 10px;" *ngIf="listarLugares.length == 0"> No hay lugares para mostrar</h5>
+  <br>
+  <span class="titulo">Opiniones de los lugareños</span>
+                    <table *ngIf="listarExperiencias.length > 0" class="table table-success table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Opinión</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let experiencias of listarExperiencias">
+                            <td>{{experiencias.nombre}}</td>
+                            <td>{{experiencias.apellido}}</td>
+                            <td>{{experiencias.descripcion}}</td>
+                            <td>{{experiencias.opinion}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h5 style="text-align: start; margin-top: 10px;" *ngIf="listarExperiencias.length == 0"> No hay experiencias para mostrar</h5>
+  <footer class="pie-pagina">
+      <div class="grupo-1">
+          <div class="box">
+              <figure>
+                  <a href="#">
+                      <img src="../../assets/images/logotravel.png" alt="Logo de SLee Dw">
+                  </a>
+              </figure>
+          </div>
+          <div class="box">
+              <h2>Systems SJAJ SA.CV</h2>
+              <p>Somos un equipo de desarrollo web y software especializado en los deseos del cliente.</p>
+              <p>Ofrecemos los mejores precios y los mejores sistemas para tu empresa.</p>
+          </div>
+          <div class="box">
+              <h2>Siguenos en nuestras redes sociales</h2>
+              <div class="red-social">
+                  <a href="#" class="fa fa-facebook"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-youtube"></a>
+              </div>
+          </div>
+      </div>
+      <div class="grupo-2">
+          <small>&copy; 2021 <b>Systems SJAJ SA.CV</b> - Todos los Derechos Reservados.</small>
+      </div>
+  </footer>

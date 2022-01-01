@@ -1,0 +1,96 @@
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <h1 class="titulo"style="color:#FF0000">T</h1><h1 class="titulo" style="color:#FF8C00">r</h1><h1 class="titulo" style="color:#FFD700">a</h1><h1 class="titulo" style="color:#008000">v</h1><h1 class="titulo"style="color:#00BFFF">e</h1><h1 class="titulo" style="color:#191970">l</h1><h1 class="titulo" style="color: black">Picarri</h1>
+        </div>
+        <img src="../../assets/images/logotravel.png" class="logocamaleon">
+        <div class="menu" id="show-menu">
+            <nav>
+                <ul>
+                    <li><a a routerLink="/principal"> <i class="fab fa-youtube"> </i>Inicio</a></li>
+                    <li class="menu-selected"><a routerLink="/buscador" class="text-menu-selected"> 
+                        <i class="fas fa-file-alt"></i>Directorio de lugares</a></li>
+                    <li><a href="/rutanay"> <i class="fab fa-youtube"> </i>Ruta Nayarit</a></li>
+                    <li><a href="/experiencias"> <i class="fas fa-headset"></i> Experiencias</a></li>
+                    <li><a href="/login"> <i class="fas fa-headset"></i>Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<script src="js/script.js"></script>
+<br>
+<br>
+<br>
+<div class="banner">
+    <div class="capa"></div>
+    <div class="info">
+        <h1>Directorio de Lugares</h1>
+        <p>A traves de esta pagina, podras encontrar un directorio de lugares el cual te ayudara a ti turista, a encontrar tu próximo destino, se encontrará con diferentes opciones para cada tipo de ocasión. Pues la variedad que tiene este maravilloso municipio encanta a todos los vacacionistas con sus maravillas desde playas, hoteles, restaurantes, atracciones. Etc.</p>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo"> Directorio de lugares</span>
+                    <table *ngIf="listarLugares.length > 0" class="table table-secondary table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Direccion</th>
+                            <th scope="col">El lugar se encuentra:</th>
+                            <th scope="col">Tipo de lugar</th>
+                            <th scope="col">Referencias</th>
+                            <th scope="col">Telefono</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let lugares of listarLugares">
+                            <td>{{lugares.nombre}}</td>
+                            <td>{{lugares.direccion}}</td>
+                            <td>{{lugares.estado}}</td>
+                            <td>{{lugares.tipo}}</td>
+                            <td>{{lugares.referencias}}</td>
+                            <td>{{lugares.telefono}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h5 style="text-align: start; margin-top: 10px;" *ngIf="listarLugares.length == 0"> No hay lugares para mostrar</h5>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#">
+                    <img src="../../assets/images/logotravel.png" alt="Logo de SLee Dw">
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>Systems SJAJ SA.CV</h2>
+            <p>Somos un equipo de desarrollo web y software especializado en los deseos del cliente.</p>
+            <p>Ofrecemos los mejores precios y los mejores sistemas para tu empresa.</p>
+        </div>
+        <div class="box">
+            <h2>Siguenos en nuestras redes sociales</h2>
+            <div class="red-social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2021 <b>Systems SJAJ SA.CV</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>

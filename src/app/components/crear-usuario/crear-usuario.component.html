@@ -1,0 +1,24 @@
+<body>
+    <br>
+    <div class="contenedor-form">
+        <div class="toggle">
+            <span routerLink="/login">Regresar</span>
+        </div>
+        <div class="formulario">
+            <h2>Crea tu Cuenta</h2>
+            <form class="mt-5" [formGroup]="usuariosForm" (ngSubmit)="agregarUsuario()">
+                <input type="text" placeholder="Usuario" required formControlName="nombre">
+                <input type="password" placeholder="Contraseña" required formControlName="contraseña">
+                <input type="email" placeholder="Correo Electronico" required formControlName="email">
+                <input type="text" placeholder="¿A qué te dedicas?" required formControlName="acercade">
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
