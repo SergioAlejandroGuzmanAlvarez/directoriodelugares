@@ -24,7 +24,7 @@ export class ListarLugaresComponent implements OnInit {
       this.listarLugares = data;
     }, error =>{
       console.log(error);
-    })
+    })  
   }
   eliminarLugar(id: any){
     this._lugarService.eliminarLugar(id).subscribe(data=>{
